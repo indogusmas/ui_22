@@ -11,29 +11,50 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# UI 22
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+A simple Flutter package for an awesome UI 22.
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:ui_22/Button.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Component UI')),
+        body: const ExampleScreen(),
+      ),
+    );
+  }
+}
+
+class ExampleScreen extends StatelessWidget {
+  const ExampleScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ButtonAction(
+              onPressed: () async {
+                debugPrint("hello");
+              },
+              title: 'Example')
+        ],
+      ),
+    );
+  }
+}
+
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.

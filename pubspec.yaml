@@ -1,7 +1,7 @@
 name: ui_22
-description: "A new Flutter package project."
+description: "Component UI 22"
 version: 0.0.1
-homepage:
+homepage: https://github.com/indogusmas/ui_22
 
 environment:
   sdk: ^3.6.0
